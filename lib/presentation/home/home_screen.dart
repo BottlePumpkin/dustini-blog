@@ -1,6 +1,7 @@
 import 'package:dustini_blog/app/resource/padding.dart';
 import 'package:dustini_blog/app/resource/sized_box.dart';
 import 'package:dustini_blog/presentation/bottom_navigation/bottom_navigation_screen.dart';
+import 'package:dustini_blog/presentation/grid_view/components/grid_view_builder_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -11,8 +12,8 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<String> list = ['바텀 네비게이션'];
-  List<Widget> widgets = [BottomNavigationView()];
+  List<String> list = ['Bottom Navigation','Grid View'];
+  List<Widget> widgets = [BottomNavigationView(),GridViewBuilderScreen()];
 
   @override
   Widget build(BuildContext context) {

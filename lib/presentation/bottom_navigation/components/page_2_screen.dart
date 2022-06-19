@@ -10,7 +10,10 @@ class Page2Screen extends StatelessWidget {
       gridDelegate:
           const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 2),
       itemBuilder: (BuildContext context, int index) {
-        return Image.asset('assets/images/${index + 1}.jpeg',fit: BoxFit.fill,);
+        return Image.asset(
+          'assets/images/${index + 1}.jpeg',
+          fit: BoxFit.fill,
+        );
       },
     );
   }
