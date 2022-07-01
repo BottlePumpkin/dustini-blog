@@ -37,6 +37,15 @@ dependencies:
   kakao_flutter_sdk: ^1.1.0 # 전체 추가
   webview_flutter: ^3.0.0
 
+
+
+  #firebase
+  firebase_analytics: ^9.1.10
+  firebase_core: ^1.18.0
+  firebase_crashlytics: ^2.8.2
+  firebase_in_app_messaging: ^0.6.0+16
+  firebase_messaging: ^11.4.2
+
 dev_dependencies:
   flutter_test:
     sdk: flutter

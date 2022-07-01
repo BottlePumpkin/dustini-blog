@@ -1,3 +1,4 @@
+import 'package:dustini_blog/app/components/app_snack_bar.dart';
 import 'package:dustini_blog/app/resource/padding.dart';
 import 'package:dustini_blog/app/resource/sized_box.dart';
 import 'package:dustini_blog/presentation/bottom_navigation/bottom_navigation_screen.dart';
@@ -12,12 +13,18 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  List<String> list = ['Bottom Navigation','Grid View'];
-  List<Widget> widgets = [BottomNavigationView(),GridViewBuilderScreen()];
+  List<String> list = ['Bottom Navigation', 'Grid View'];
+  List<Widget> widgets = [BottomNavigationView(), GridViewBuilderScreen()];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add_a_photo),
+        onPressed: () {
+          AppSnackBar.showSnackBar('사진을 업로드 할 수 없습니다.');
+        },
+      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
@@ -30,13 +37,13 @@ class _HomeScreenState extends State<HomeScreen> {
               itemCount: list.length,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
+                 behavior: HitTestBehavior.opaque,
+
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(builder: (context) => widgets[index]),
                     );
-
-
                   },
                   child: Row(
                     children: [
