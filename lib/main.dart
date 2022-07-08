@@ -1,4 +1,5 @@
 import 'package:dustini_blog/firebase_options.dart';
+import 'package:dustini_blog/presentation/chat_ui/chat_screen.dart';
 import 'package:dustini_blog/presentation/firebase/firebase_screen.dart';
 import 'package:dustini_blog/presentation/home/home_screen.dart';
 import 'package:dustini_blog/presentation/tab_bar/changed_tab_bar_color_screen.dart';
@@ -41,7 +42,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: FirebaseScreen(),
+      home: ChatScreen(),
     );
   }
 }
